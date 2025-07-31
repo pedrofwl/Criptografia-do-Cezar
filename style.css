@@ -1,0 +1,93 @@
+body {
+    background-color: #fff8dc;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fffbf2;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 200, 100, 0.3);
+  }
+  
+  h1 {
+    color: #ff7f50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .descricao {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .input-box {
+    background-color: #fef3e2;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 2px dashed #ffa500;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff6347;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ffcc80;
+    border-radius: 10px;
+    font-size: 1em;
+  }
+  
+  button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background-color: #ffb347;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #ffa500;
+    transform: scale(1.05);
+  }
+  
+  .resultado {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  .explicacao {
+    background-color: #e0ffe0;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #00c851;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+  }
+  

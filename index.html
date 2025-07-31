@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔐 Criptografia Divertida!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Criptografia Divertida com Emojis! 🎉</h1>
+    <p class="descricao">
+      Aqui você aprende como proteger palavras com um toque de diversão usando a famosa <strong>Cifra de César</strong>! 👑📜
+    </p>
+
+    <div class="input-box">
+      <label for="mensagem">📝 Digite sua mensagem:</label>
+      <input type="text" id="mensagem" placeholder="Ex: segredo mágico" />
+
+      <label for="chave">🔑 Chave (1 a 25):</label>
+      <input type="number" id="chave" value="3" min="1" max="25" />
+
+      <button onclick="criptografar()">✨ Criptografar Agora!</button>
+    </div>
+
+    <div class="resultado">
+      <h2>📦 Resultado:</h2>
+      <p id="saida">---</p>
+    </div>
+
+    <div class="explicacao">
+      <h3>📚 Passo a passo da criptografia:</h3>
+      <div id="detalhes"></div>
+    </div>
+
+    <footer>
+      Feito com 💖 para ensinar segurança digital com diversão!
+    </footer>
+  </div>
+
+  <script>
+    function criptografar() {
+      const msg = document.getElementById("mensagem").value.toLowerCase();
+      const chave = parseInt(document.getElementById("chave").value);
+      let resultado = "";
+      let detalhes = "";
+
+      for (let i = 0; i < msg.length; i++) {
+        const letra = msg[i];
+
+        if (letra >= "a" && letra <= "z") {
+          const codOriginal = letra.charCodeAt(0);
+          const novoCod = ((codOriginal - 97 + chave) % 26) + 97;
+          const novaLetra = String.fromCharCode(novoCod);
+          resultado += novaLetra;
+          detalhes += `<p>🔠 <strong>${letra}</strong> ➡️ <strong>${novaLetra}</strong> (posição ${codOriginal} ➡️ ${novoCod})</p>`;
+        } else {
+          resultado += letra;
+          detalhes += `<p>🔹 <strong>${letra}</strong> (caractere mantido)</p>`;
+        }
+      }
+
+      document.getElementById("saida").innerHTML = "🔒 " + resultado;
+      document.getElementById("detalhes").innerHTML = detalhes;
+    }
+  </script>
+</body>
+</html>
